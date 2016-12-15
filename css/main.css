@@ -1,0 +1,180 @@
+#fullpage .section {
+	height: 1000px;
+}
+.section{
+	background-size: cover;
+}
+.slide{
+	background-size: cover;
+}
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+#section0 {
+    background-image: url("../imgs/lw1.jpeg");
+}
+
+#polina {
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 50%;
+  margin:2rem;
+	margin-left:auto;
+  margin-right:auto;
+  float:inherit;
+  font-size: 1.2rem;
+}
+#polina h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+	text-align:center;
+}
+#polina p{
+	text-align: center;
+}
+button {
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none;
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s background;
+}
+#polina button:hover {
+   background: rgba(0,0,0,0.5);
+}
+
+#polina a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background;
+}
+#polina a:hover{
+  background:rgba(0,0,0,0.9);
+}
+#myVideo{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-color: black; /* in case the video doesn't fit the whole page*/
+		background-image: /* our video */;
+		background-position: center center;
+		background-size: contain;
+		object-fit: cover; /*cover video background */
+		z-index:3;
+}
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section1 .layer{
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	left: 0;
+	top: 43%;
+	/*
+	* Preventing flicker on some browsers
+	* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+	*/
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+/*solves problem with overflowing video in Mac with Chrome */
+#section1{
+	overflow: hidden;
+}
+
+/** { box-sizing: border-box; }
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}*/
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); -webkit-transition: .6s background; transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
