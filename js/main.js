@@ -33,26 +33,32 @@ $(document).ready(function() {
 			}
 		});
 	});
+//three bloger
+$(function(){
+  $('[data-toggle="popover"]').popover();
+});
+
+
 //post area
 
-document.querySelector('#postButton').addEventListener('click', function(){
-	userMsg=document.querySelector('#userText').value;
+document.querySelector('#postButton1').addEventListener('click', function(){
+	userMsg=document.querySelector('#userText1').value;
 	messageList.push(userMsg);
 
 	var el = document.createElement("P"); //<p>
 		el.innerHTML=userMsg;   //<p>message</p>
-		document.querySelector('#messages').appendChild(el);
-		document.querySelector('#userText').value = "";
+		document.querySelector('#area1').appendChild(el);
+		document.querySelector('#userText1').value = "";
 });
 
 var messageList = [];
 var userMsg = "xxx";
-var userMsg = document.querrySelector('#userText');
+var userMsg = document.querrySelector('#userText1');
 
-document.querySelector('#postButton').addEventListener('click', function() {
-var userMsg = document.querySelector('#userText').value;
+document.querySelector('#postButton1').addEventListener('click', function() {
+var userMsg = document.querySelector('#userText1').value;
 messageList.push(userMsg);
 
 console.log(userMsg);
-document.querySelector('#userText').value="";
+document.querySelector('#userText1').value="";
 });
