@@ -155,7 +155,14 @@ button {
 	padding: 2rem;
 	font-family: Avenir, Helvetica, sans-serif;
 }
+#section3{
+	background-image: url("../imgs/diet1.jpg");
+  /*text-align: center;*/
+}
 #section4{
+	text-align:center;
+}
+#area1 #area2{
 	text-align:center;
 }
 

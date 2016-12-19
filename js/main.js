@@ -41,24 +41,24 @@ $(function(){
 
 //post area
 
-document.querySelector('#postButton1').addEventListener('click', function(){
-	userMsg=document.querySelector('#userText1').value;
+document.querySelector('#postButton1,postButton2').addEventListener('click', function(){
+	userMsg=document.querySelector('#userText2').value;
 	messageList.push(userMsg);
 
 	var el = document.createElement("P"); //<p>
 		el.innerHTML=userMsg;   //<p>message</p>
-		document.querySelector('#area1').appendChild(el);
-		document.querySelector('#userText1').value = "";
+		document.querySelector('#area2').appendChild(el);
+		document.querySelector('#userText2').value = "";
 });
 
 var messageList = [];
 var userMsg = "xxx";
-var userMsg = document.querrySelector('#userText1');
+var userMsg = document.querrySelector('#userText2');
 
-document.querySelector('#postButton1').addEventListener('click', function() {
-var userMsg = document.querySelector('#userText1').value;
+document.querySelector('#postButton2').addEventListener('click', function() {
+var userMsg = document.querySelector('#userText2').value;
 messageList.push(userMsg);
 
 console.log(userMsg);
-document.querySelector('#userText1').value="";
+document.querySelector('#userText2').value="";
 });
